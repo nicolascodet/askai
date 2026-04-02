@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #08080c;
+  --background: #09090b;
   --foreground: #e4e4e7;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -14,7 +14,8 @@
   --font-mono: var(--font-geist-mono);
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; }
+
 html, body { height: 100%; }
 
 body {
@@ -24,50 +25,51 @@ body {
   overflow: hidden;
 }
 
-::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.06); border-radius: 10px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 10px; }
 
 .glass {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.05);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 }
 
 .bg-mesh {
   background:
-    radial-gradient(ellipse at 10% 40%, rgba(99,102,241,0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 90% 15%, rgba(139,92,246,0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 15% 50%, rgba(99,102,241,0.07) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 15%, rgba(139,92,246,0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 85%, rgba(59,130,246,0.04) 0%, transparent 50%),
     var(--background);
 }
 
 @keyframes pulse-soft {
-  0%, 100% { opacity: 0.3; }
+  0%, 100% { opacity: 0.4; }
   50% { opacity: 1; }
 }
 .animate-pulse-soft { animation: pulse-soft 1.5s ease-in-out infinite; }
 
 @keyframes spin-slow { to { transform: rotate(360deg); } }
-.animate-spin-slow { animation: spin-slow 2s linear infinite; }
+.animate-spin-slow { animation: spin-slow 3s linear infinite; }
 
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(6px); }
+  from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.animate-fade-up { animation: fade-up 0.25s ease-out forwards; }
+.animate-fade-up { animation: fade-up 0.3s ease-out forwards; }
 
 @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
 .cursor-blink::after {
   content: '\25AE';
-  animation: blink 0.7s step-end infinite;
+  animation: blink 0.8s step-end infinite;
   color: #818cf8;
-  margin-left: 1px;
+  margin-left: 2px;
 }
 
-.pb-safe { padding-bottom: env(safe-area-inset-bottom, 8px); }
+.pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
 
-/* ── Markdown prose ─────────────────────────────────────────────── */
+/* ── Markdown prose (react-markdown) ─────────────────────────────── */
 .prose {
   font-size: 14px;
   line-height: 1.7;
@@ -98,10 +100,10 @@ body {
   font-family: var(--font-mono), ui-monospace, monospace;
 }
 .prose pre {
-  background: rgba(0,0,0,0.45);
-  border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 10px;
-  padding: 0.9em 1em;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  padding: 1em;
   overflow-x: auto;
   margin: 0.5em 0 0.8em;
   -webkit-overflow-scrolling: touch;
@@ -115,16 +117,16 @@ body {
 }
 
 .prose blockquote {
-  border-left: 2px solid rgba(129,140,248,0.4);
-  padding-left: 0.9em;
+  border-left: 2px solid #818cf8;
+  padding-left: 1em;
   margin: 0.4em 0 0.7em;
   color: #a1a1aa;
 }
 
 .prose hr {
   border: none;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  margin: 1em 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin: 1.2em 0;
 }
 
 .prose table { width: 100%; border-collapse: collapse; margin: 0.5em 0 0.8em; font-size: 0.9em; }

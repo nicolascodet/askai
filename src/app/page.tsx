@@ -9,7 +9,7 @@ const API_KEY = process.env.NEXT_PUBLIC_API_KEY || "dev-key-123";
 
 // ── Skill avatars ────────────────────────────────────────────────────
 const AVATARS: Record<string, { emoji: string; bg: string }> = {
-  startup_advisor:        { emoji: "🚀", bg: "from-violet-500/20 to-purple-600/20 border-violet-500/25" },
+  startup_advisor:        { emoji: "🚀", bg: "from-violet-500/20 to-purple-600/20 border-violet-500/30" },
   product_strategist:     { emoji: "🎯", bg: "from-blue-500/20 to-cyan-500/20 border-blue-500/25" },
   decision_coach:         { emoji: "⚖️", bg: "from-amber-500/20 to-orange-500/20 border-amber-500/25" },
   marketing_analyst:      { emoji: "📊", bg: "from-pink-500/20 to-rose-500/20 border-pink-500/25" },
@@ -29,7 +29,7 @@ const AVATARS: Record<string, { emoji: string; bg: string }> = {
   logic_checker:          { emoji: "🧠", bg: "from-purple-500/20 to-fuchsia-500/20 border-purple-500/25" },
   trend_spotter:          { emoji: "🔮", bg: "from-fuchsia-500/20 to-pink-500/20 border-fuchsia-500/25" },
   creative_writer:        { emoji: "🎨", bg: "from-rose-500/20 to-pink-500/20 border-rose-500/25" },
-  ux_critic:              { emoji: "👁️", bg: "from-violet-500/20 to-indigo-500/20 border-violet-500/25" },
+  ux_critic:              { emoji: "👁️", bg: "from-violet-500/20 to-indigo-500/20 border-violet-500/30" },
   educator:               { emoji: "📚", bg: "from-yellow-500/20 to-amber-500/20 border-yellow-500/25" },
   generalist:             { emoji: "✨", bg: "from-zinc-400/20 to-slate-500/20 border-zinc-500/25" },
 };
